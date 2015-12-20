@@ -1,0 +1,120 @@
+@import "variables";
+
+.comments {
+  margin-bottom: 120px;
+  &__title, &__promo {
+    text-align: center;
+  }
+  &__promo {
+    margin-bottom: 32px;
+  }
+  &__slide {
+    position: relative;
+  }
+  &__arrow {
+    position: absolute;
+    width: 28px;
+    height: 159px;
+    right: 50px;
+    background-image: url("../img/slider-comments-arrow.svg");
+  }
+  &__arrow--prev {
+    top: 0;
+  }
+  &__arrow--next {
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+  &__slider input {
+    position: absolute;
+    opacity: 0;
+  }
+  &__slider-controls {
+    position: absolute;
+    width: 18px;
+    height: auto;
+    right: 52px;
+    top: 50%;
+    margin-top: -75px;
+    label {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 10px;
+      height: 10px;
+      background-color: $color-background;
+      border: 2px solid $color-second;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    label:hover {
+      border-color: $color-hoverandinput;
+      background-color: $color-hoverandinput;
+      cursor: pointer;
+    }
+  }
+  #btn-1:checked~ .comments__slider-controls label[for="btn-1"],
+  #btn-2:checked~ .comments__slider-controls label[for="btn-2"],
+  #btn-3:checked~ .comments__slider-controls label[for="btn-3"],
+  #btn-4:checked~ .comments__slider-controls label[for="btn-4"],
+  #btn-5:checked~ .comments__slider-controls label[for="btn-5"] {
+    background-color: $color-second;
+    cursor: auto;
+  }
+  &__block {
+    margin-bottom: 38px;
+  }
+  &__photo {
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    height: 140px;
+    margin-right: 57px;
+    border: 1px solid $color-second;
+    border-radius: 50%;
+  }
+  &__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 695px;
+    padding: 35px 35px 22px 35px;
+    box-sizing: border-box;
+    border: 1px solid $color-second;
+  }
+  &__item::before, &__item::after {
+    content: " ";
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    top: 50%;
+    margin-top: -30px;
+    padding: 20px 0;
+    background: $color-background url(../img/quote.svg) center no-repeat;
+  }
+  &__item::before {
+    left: -13px;
+  }
+  &__item::after {
+    right: -13px;
+    transform: rotate(180deg);
+  }
+  &__text {
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 1px;
+    line-height: 24px;
+  }
+  &__author {
+    float: left;
+    color: $color-second;
+  }
+  &__link {
+    float: right;
+    color: $color-second;
+    text-decoration: none;
+  }
+  &__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,30 @@
+@import "variables";
+
+.slider-clients {
+  position: relative;
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 28px;
+  }
+  &__wrapper ul {
+    text-align: center;
+  }
+  .arrow svg {
+    width: 34px;
+    height: 64px;
+    fill: $color-second;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -34px;
+  }
+  .arrow-next {
+    right: 0;
+  }
+  .arrow:hover svg {
+    fill: $color-hoverandinput;
+    cursor: pointer;
+  }
+}

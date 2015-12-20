@@ -1,0 +1,62 @@
+@import "variables";
+
+.contacts-block {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 40px;
+  width: 311px;
+  text-align: center;
+  border-bottom: 1px solid $color-second;
+  &::before, &::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 1px;
+    background-color: $color-second;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 31px;
+  }
+  &__title::before, &__title::after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    height: 1px;
+    width: 64px;
+    background-color: $color-second;
+  }
+  &__title::before {
+    left: 0;
+  }
+  &__title::after {
+    right: 0;
+  }
+}
+
+.contacts-block+.contacts-block {
+  margin-left: 50px;
+}
+
+.e-mail {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  font-style: normal;
+  color: $color-second;
+  font-size: 22px;
+  font-family: $font-family-second;
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid $color-second;
+    margin-bottom: -1px;
+  }
+}

@@ -1,0 +1,201 @@
+@import "variables";
+
+.service-item {
+  img {
+    border: 20px solid #fff;
+  }
+}
+
+.service-item {
+  position: relative;
+  margin-bottom: 111px;
+  &--right {
+    margin-left: 10px;
+  }
+  &--left {
+    margin-right: 10px;
+  }
+  img {
+    margin-bottom: 39px;
+  }
+  .small-triangle-svg {
+    fill: #ffffff;
+    height: 15px;
+    width: 30px;
+    position: absolute;
+    top: 340px;
+    left: 47%;
+  }
+  &__heading {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__heading::after {
+    content: " ";
+    position: relative;
+    display: block;
+    top: -23px;
+    z-index: 1;
+    border-bottom: 1px solid $color-second;
+  }
+  &__title {
+    position: relative;
+    display: inline;
+    padding: 0 10px;
+    background-color: $color-background;
+    z-index: 5;
+  }
+  &__icon-wrap {
+    text-align: center;
+  }
+  svg {
+    fill: #fff;
+  }
+  &__icon-drums {
+    width: 35px;
+    height: 33px;
+  }
+  &__icon-baloons {
+    width: 25px;
+    height: 33px;
+  }
+  &__icon-glasses {
+    width: 31px;
+    height: 33px;
+  }
+  &__icon-ball {
+    width: 33px;
+    height: 33px;
+  }
+  &__text {
+    box-sizing: border-box;
+    padding-left: 39px;
+    margin-bottom: 26px;
+  }
+  &__link-wrap {
+    text-align: center;
+    position: relative;
+    line-height: normal;
+  }
+  &__link-wrap::after {
+    content: " ";
+    position: relative;
+    display: block;
+    top: -12px;
+    z-index: 1;
+    border-bottom: 1px solid $color-second;
+  }
+  &__link {
+    position: relative;
+    padding: 0 25px;
+    color: $color-second;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: $color-background;
+    z-index: 5;
+  }
+  &__link:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.vertical-lines::before, .vertical-lines::after {
+  content: " ";
+  position: absolute;
+  height: 206px;
+  width: 1px;
+  background-color: $color-second;
+  top: 398px;
+}
+
+.vertical-lines::after {
+  right: 0;
+}
+
+.info-about {
+  position: relative;
+  margin-bottom: 118px;
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 75px;
+    height: 14px;
+    background-image: url(../img/small-separator.png);
+    bottom: -7px;
+    left: 205px;
+  }
+  &__part-one {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    float: right;
+    margin-bottom: 72px;
+    padding: 0 41px 36px 64px;
+  }
+  &__part-one::before {
+    content: " ";
+    position: absolute;
+    width: 867px;
+    height: 902px;
+    background-image: url(../img/bg/bg1-info-about.png);
+    left: -753px;
+    top: -148px;
+  }
+  &__part-one::after {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-right: 1px solid $color-second;
+    border-bottom: 1px solid $color-second;
+    right: 0;
+    bottom: 5px;
+  }
+  &__part-two {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    clear: both;
+    padding: 39px 67px 39px 39px;
+  }
+  &__part-two::after {
+    content: " ";
+    position: absolute;
+    width: 528px;
+    height: 721px;
+    background-image: url(../img/bg/bg2-info-about.png);
+    right: -550px;
+    top: -110px;
+  }
+  &__part-two::before {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-left: 1px solid $color-second;
+    border-top: 1px solid $color-second;
+    top: 8px;
+    left: -5px;
+  }
+  &__microfon-wrap {
+    margin-bottom: 33px;
+    text-align: center;
+    line-height: normal;
+  }
+  &__microfon {
+    display: inline-block;
+    width: 119px;
+    height: 119px;
+    background-image: url(../img/microfon2.png);
+  }
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+
+
+

@@ -1,0 +1,17 @@
+.images-wrap {
+  font-size: 0;
+}
+
+.gallery-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  img {
+    width: 313px;
+  }
+}
+
+.gallery-item:nth-child(3n) {
+  margin-right: 0;
+}

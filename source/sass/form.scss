@@ -1,0 +1,190 @@
+@import "variables";
+
+.form {
+  position: relative;
+  padding: 0 47px 105px 47px;
+  box-sizing: border-box;
+  background-image: url(../img/bg/bg-form.png);
+  background-position: -71px -120px;
+  &__title-wrap {
+    position: relative;
+    margin-bottom: 24px;
+    line-height: normal;
+    text-align: center;
+  }
+  &__title-wrap::after {
+    content: " ";
+    width: 1040px;
+    position: absolute;
+    top: 20px;
+    left: -47px;
+    z-index: 1;
+    border-bottom: 1px solid $color-second;
+  }
+  &__title {
+    display: inline;
+    position: relative;
+    padding: 0 39px;
+    background-color: #010711;
+    z-index: 5;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    border-bottom: 2px solid $color-second;
+  }
+  &__item--name {
+    width: 64.6%;
+    margin-right: 47px;
+    margin-bottom: 28px;
+  }
+  &__item--email {
+    width: 29.8%;
+    margin-bottom: 28px;
+  }
+  &__item--date {
+    width: 29.8%;
+    margin-right: 70px;
+    margin-bottom: 30px;
+  }
+  &__item--nodate {
+    position: relative;
+    width: 24.9%;
+    margin-right: 63px;
+    margin-bottom: 30px;
+    border-bottom: none;
+    input {
+      display: none;
+    }
+  }
+  &__label--nodate {
+    position: relative;
+    padding-left: 31px;
+  }
+  input[type="checkbox"]+label::before {
+    content: " ";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    border: 1px solid $color-second;
+    border-radius: 2px;
+  }
+  input[type="checkbox"]+label:hover::before {
+    border: 1px solid $color-hoverandinput;
+  }
+  input[type="checkbox"]:checked+label::before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAABMElEQVQoU42SP0sDQRDF32xyihgQxE7ETUAbC8FC7OxVMBfzEayEu3CFhZDGwsbuLn4I0SQXjWhtp5V/2oC3QbAQwUYECcfIbS7hEGPcaph5v2HezBL+8VTD3gbDEYL2aJj+9WQn82mk3wGkI+1QQPl2E8CGbswo/wkov7QFcDUWP8qCtzgQaF1ao8YXRaOMRUAqxPxM0WtpIKhbq9lC5TrpR9XtUxCKOkc4kHmvrEPVKB2CeRegK2m6a1FS1ax1CLqIGwTS9HK9ZqR8+wPAeNcTXGF09rkzEgA8oUWCl+Rm5a4PPFftuTCFGwCTcfINwFQ35iNpVqzkqNpDu+bkWIQPADKJ4os0vemfd+pvqX3uLHAY3vcOxEQr2bx7OxCICk++tSxAxwQ6mzVd57df8A0Sx1nQ4mEp1wAAAABJRU5ErkJggg==);
+    width: 15px;
+    height: 15px;
+    line-height: 16px;
+    text-align: center;
+  }
+  &__item--tel {
+    width: 29.8%;
+    margin-bottom: 30px;
+  }
+  &__item--comment {
+    width: 100%;
+    margin-bottom: 62px;
+  }
+  &__btn-wrap {
+    position: relative;
+    text-align: center;
+  }
+  &__btn-wrap::after {
+    content: " ";
+    width: 1040px;
+    position: absolute;
+    bottom: 16px;
+    left: -47px;
+    z-index: 1;
+    border-bottom: 1px solid $color-second;
+  }
+  &__button {
+    position: relative;
+    padding: 0 40px;
+    outline: none;
+    border: none;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-family-base;
+    background-color: #09101c;
+    color: $color-second;
+    z-index: 5;
+  }
+  &__button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &__label {
+    display: block;
+  }
+  &__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: $font-family-base;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 24px;
+    background-color: transparent;
+    color: $color-hoverandinput;
+  }
+}
+
+::-webkit-input-placeholder { color: $color-hoverandinput; }
+::-moz-placeholder          { color: $color-hoverandinput; }/* Firefox 19+ */
+:-moz-placeholder           { color: $color-hoverandinput; }/* Firefox 18- */
+:-ms-input-placeholder      { color: $color-hoverandinput; }
+
+.form-vertical-lines::before, .form-vertical-lines::after {
+  content: " ";
+  position: absolute;
+  height: 364px;
+  width: 1px;
+  background-color: #e0af6e;
+  top: 20px;
+}
+
+.form-vertical-lines::before {
+  left: 0;
+}
+
+.form-vertical-lines::after {
+  right: 0;
+}
+
+.contacts-main {
+  .form {
+    margin-top: 114px;
+    background-image: none;
+  }
+  .form__title-wrap::after, .form__title-wrap::before {
+    content: " ";
+    width: 385px;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    border-bottom: 1px solid $color-second;
+  }
+  .form__title-wrap::before {
+    right: -46px;
+  }
+  .form__title {
+    background-color: transparent;
+  }
+  .form__button {
+    background-color: $color-background;
+  }
+}
+
+.gallery-main {
+  .form {
+    margin-top: 119px;
+  }
+}

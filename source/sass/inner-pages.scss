@@ -1,0 +1,86 @@
+@import "variables";
+
+.top-text-left {
+  padding-left: 49px;
+}
+
+.top-text-right {
+  padding-left: 9px;
+  padding-right: 52px;
+}
+
+.slaider-photo {
+  margin-top: 69px;
+  margin-bottom: 115px;
+  &__main-slide {
+    position: relative;
+    margin-bottom: 80px;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -34px;
+    svg {
+      width: 32px;
+      height: 62px;
+      fill: $color-second;
+    }
+  }
+  .arrow-prev {
+    left: 50px;
+  }
+  .arrow-next {
+    right: 50px;
+  }
+  .arrow:hover svg {
+    fill: $color-hoverandinput;
+    cursor: pointer;
+  }
+  &__slides {
+    margin-left: 48px;
+  }
+  &__slides-item {
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__slides-item:first-child {
+    margin-bottom: 40px;
+  }
+  &__slides-item:nth-child(2) {
+    margin-right: 50px;
+  }
+  &__text {
+    position: relative;
+    box-sizing: border-box;
+    margin: 46px 37px 46px 9px;
+  }
+  &__text::before, &__text::after {
+    content: " ";
+    position: absolute;
+    width: 75px;
+    height: 14px;
+    left: 50%;
+    margin-left: -53px;
+    background-image: url(../img/small-separator.png);
+  }
+  &__text::before {
+    top: -45px;
+  }
+  &__text::after {
+    bottom: -45px;
+  }
+}
+
+.video-block {
+  text-align: center;
+  margin-bottom: 98px;
+  &__text {
+    margin-bottom: 37px;
+  }
+  .video {
+    display: inline-block;
+    width: 854px;
+    height: 480px;
+    background-color: $color-second;
+  }
+}
